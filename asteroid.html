@@ -26,20 +26,19 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>Spot the Dot — Two-Image Starfield Game</h1>
+    <h1>Spot the Asteroid — Two-Image Starfield Game</h1>
     <div class="stats">
       <span class="badge ok">Correct: <span id="score-ok">0</span></span>
       <span class="badge err">Wrong: <span id="score-err">0</span></span>
       <span class="msg" id="msg"></span>
     </div>
-    <div class="tiny">Goal: Click the red dot in the <b>second</b> image. A correct click says “victory”, then a new round is generated.</div>
+    <div class="tiny">Goal: Click the asteroid in the <b>second</b> image. A correct click says “victory”, then a new round is generated.</div>
 
     <div class="canvases">
-      <canvas id="c1" width="500" height="500" aria-label="Image 1"></canvas>
-      <canvas id="c2" width="500" height="500" aria-label="Image 2 (click the dot here)"></canvas>
+      <canvas id="c1" width="250" height="250" aria-label="Image 1"></canvas>
+      <canvas id="c2" width="250" height="250" aria-label="Image 2 (click the dot here)"></canvas>
     </div>
 
-    <p class="tiny">Tip: Serve this folder with <code>python -m http.server</code> and open <code>http://localhost:8000/spot-the-dot.html</code>.</p>
   </div>
 
 <script>
@@ -47,8 +46,8 @@
 // CONFIG — tweak values here
 // ==========================
 const CONFIG = {
-  WIDTH: 500,               // canvas width (px)
-  HEIGHT: 500,              // canvas height (px)
+  WIDTH: 250,               // canvas width (px)
+  HEIGHT: 250,              // canvas height (px)
   STAR_COUNT_MIN: 100,       // inclusive
   STAR_COUNT_MAX: 150,       // inclusive
   STAR_RADIUS_MIN: 0.5,      // px (0.5 gives nicely small pinpricks)
@@ -198,3 +197,4 @@ regenerate();
 </script>
 </body>
 </html>
+
