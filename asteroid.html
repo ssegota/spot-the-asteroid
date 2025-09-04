@@ -160,12 +160,13 @@ function canvasClickHandler(ev, which){
   const x = (ev.clientX - rect.left) * (ev.target.width / rect.width);
   const y = (ev.clientY - rect.top)  * (ev.target.height / rect.height);
 
+  // target is the dot for the canvas that was clicked
   const target = (which === 2) ? dot2 : dot1;
   const hitR = CONFIG.DOT_RADIUS + CONFIG.CLICK_TOLERANCE;
   const isHit = dist2(x,y,target.x,target.y) <= hitR*hitR;
 
-  if (which === 2 && isHit) {
-    scoreOK++; updateScores(); msg('victory');
+  if (isHit) {
+    scoreOK++; updateScores(); msg('victory');   // or msg(which===1 ? 'victory (left)' : 'victory (right)')
     locked = true;
     setTimeout(()=>{ locked = false; regenerate(); }, CONFIG.REGEN_DELAY_MS);
   } else {
@@ -197,6 +198,7 @@ regenerate();
 </script>
 </body>
 </html>
+
 
 
 
