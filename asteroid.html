@@ -35,8 +35,8 @@
     <div class="tiny">Goal: Click the asteroid in the <b>second</b> image. A correct click says “victory”, then a new round is generated.</div>
 
     <div class="canvases">
-      <canvas id="c1" width="250" height="250" aria-label="Image 1"></canvas>
-      <canvas id="c2" width="250" height="250" aria-label="Image 2 (click the dot here)"></canvas>
+      <canvas id="c1" width="300" height="300" aria-label="Image 1"></canvas>
+      <canvas id="c2" width="300" height="300" aria-label="Image 2 (click the dot here)"></canvas>
     </div>
 
   </div>
@@ -46,16 +46,16 @@
 // CONFIG — tweak values here
 // ==========================
 const CONFIG = {
-  WIDTH: 250,               // canvas width (px)
-  HEIGHT: 250,              // canvas height (px)
-  STAR_COUNT_MIN: 100,       // inclusive
-  STAR_COUNT_MAX: 150,       // inclusive
+  WIDTH: 300,               // canvas width (px)
+  HEIGHT: 300,              // canvas height (px)
+  STAR_COUNT_MIN: 75,       // inclusive
+  STAR_COUNT_MAX: 125,       // inclusive
   STAR_RADIUS_MIN: 0.5,      // px (0.5 gives nicely small pinpricks)
-  STAR_RADIUS_MAX: 2.5,      // px (diameters ~1–5 px)
-  DOT_RADIUS: 4,             // px (click target; separate CLICK_TOLERANCE below)
+  STAR_RADIUS_MAX: 1.5,      // px (diameters ~1–5 px)
+  DOT_RADIUS: 3,             // px (click target; separate CLICK_TOLERANCE below)
   DOT_COLOR: { r: 200, g: 200, b: 200 }, // default red
-  CLICK_TOLERANCE: 15,        // extra px around dot to accept as a hit
-  EDGE_MARGIN: 8,            // keep stars/dots away from edges (px)
+  CLICK_TOLERANCE: 20,        // extra px around dot to accept as a hit
+  EDGE_MARGIN: 4,            // keep stars/dots away from edges (px)
   REGEN_DELAY_MS: 800        // pause after victory before regenerating
 };
 
@@ -197,4 +197,5 @@ regenerate();
 </script>
 </body>
 </html>
+
 
